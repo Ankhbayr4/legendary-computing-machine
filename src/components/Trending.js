@@ -1,6 +1,17 @@
+import Link from "next/link";
+import useSWR from "swr";
+const url = "https://dev.to/api/articles";
+const fetcher = (...args) => fetch(...args).then((res) => res.json());
 const Trending = () => {
+  const { data: blogs = {}, isLoading } = useSWR(url, fetcher);
+  if (isLoading) return <div>loading</div>;
   return (
     <div className="flex flex-col gap-[30px]">
+      {blogs.map((blog) => {
+        <Link href={`blog/${blog.id}`}>
+          <div>{blog.title}</div>
+        </Link>;
+      })}
       <h3 className="text-2xl ">Trending</h3>
       <div
         className="card bg-base-100 image-full w-[289px]

@@ -1,5 +1,6 @@
 import useSWR from "swr";
 import moment from "moment";
+import Link from "next/link";
 
 const url = "https://dev.to/api/articles";
 
@@ -39,12 +40,14 @@ const Page = () => {
       <div className="max-w-[1200px] grid grid-cols-3 mx-auto gap-12">
         {data.map((blog) => {
           return (
-            <BlogCard
-              key={blog.id}
-              image={blog.cover_image}
-              title={blog.title}
-              date={blog.published_at}
-            />
+            <Link href={`blog/${blog.id}`}>
+              <BlogCard
+                key={blog.id}
+                image={blog.cover_image}
+                title={blog.title}
+                date={blog.published_at}
+              />
+            </Link>
           );
         })}
       </div>

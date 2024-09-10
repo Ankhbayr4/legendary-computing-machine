@@ -7,7 +7,9 @@ const Header = () => {
       <img className="mr-36 h-8 w-40" src="/Logo.png" />
       <div className="flex gap-10 w-[667px] justify-center items-center ">
         <p>Home</p>
+
         <p>Blog</p>
+
         <p>Contant</p>
       </div>
       <input

@@ -38,7 +38,7 @@ const Page = () => {
         </div>
       </div>
 
-      <div className="max-w-[1200px] grid grid-cols-3 mx-auto gap-12">
+      <div className="max-w-[1200px] grid grid-cols-3 mx-auto gap-5 ">
         {Blogcarddata.map((blog) => {
           return (
             <Link href={`blog/${blog.id}`}>
@@ -52,9 +52,12 @@ const Page = () => {
           );
         })}
       </div>
-      <button className="border solid flex items-center justify-center p-3 ">
-        Load More
-      </button>
+      <div className="flex items-center justify-center">
+        {" "}
+        <button className="border solid flex items-center justify-center p-3 text-lg font-medium ">
+          Load More
+        </button>
+      </div>
     </div>
   );
 };

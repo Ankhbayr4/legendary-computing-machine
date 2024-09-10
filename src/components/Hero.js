@@ -7,34 +7,44 @@ const fetcher = (...args) => fetch(...args).then((res) => res.json());
 
 const Content = () => {
   const { data, error, isLoading } = useSWR(url, fetcher);
-  const [count, setCount] = useState(0);
+  const [count, setCount] = useState(1);
 
   if (isLoading) {
     return <p>...loading</p>;
   }
-  console.log(count);
+
   if (error) {
     return <p>...oh sorry error</p>;
   }
+  const selectedBlog = data[count];
+
+  const handleNext = () => {
+    setCount((nextCount) => nextCount + 1);
+  };
+  const handlePrev = () => {
+    setCount((prevCount) => prevCount - 1);
+  };
   return (
-    <div>
-      <div className="carousel max-w-[1200px] ">
-        {data.map((content, index) => (
-          <div
-            id={`${index}`}
-            className="carousel-item relative w-full flex flex-col"
-          >
-            <img src={content.cover_image} className="h-[600px]" />
-          </div>
-        ))}
+    <div className="flex flex-col gap-[11px]">
+      <div className="max-w-[1200px] ">
+        <div className="w-full flex flex-col">
+          <img src={selectedBlog.cover_image} className="h-[600px]" />
+        </div>
       </div>
-      <div className=" flex justify-end ">
-        <a href={`#${count - 1}`} className="btn btn-circle">
-          hasah
-        </a>
-        <a href={`#${count + 1}`} className="btn btn-circle">
-          nemeh
-        </a>
+      <div className=" flex justify-end gap-[9px]">
+        <button
+          onClick={handlePrev}
+          className="border solid w-10 h-10 rounded-md flex items-center justify-center"
+        >
+          <img src="icon (1).png" />
+        </button>
+        <button
+          onClick={handleNext}
+          className="border solid w-10 h-10 rounded-md flex items-center justify-center"
+        >
+          {" "}
+          <img src="icon.png" />
+        </button>
       </div>
     </div>
   );

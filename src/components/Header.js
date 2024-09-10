@@ -10,7 +10,10 @@ const Header = () => {
         <p>Blog</p>
         <p>Contant</p>
       </div>
-      <input placeholder="search" className="bg-slate-200 ml-5 "></input>
+      <input
+        placeholder="search"
+        className="bg-slate-200 ml-5 rounded-md"
+      ></input>
     </div>
   );
 };

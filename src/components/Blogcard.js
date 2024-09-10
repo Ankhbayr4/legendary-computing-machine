@@ -17,6 +17,7 @@ const Page = () => {
     return <p>...oh sorry error</p>;
   }
 
+  const Blogcarddata = [...data].slice(0, 12);
   return (
     <div className="flex flex-col gap-8">
       <div>
@@ -38,7 +39,7 @@ const Page = () => {
       </div>
 
       <div className="max-w-[1200px] grid grid-cols-3 mx-auto gap-12">
-        {data.map((blog) => {
+        {Blogcarddata.map((blog) => {
           return (
             <Link href={`blog/${blog.id}`}>
               <BlogCard
@@ -51,6 +52,9 @@ const Page = () => {
           );
         })}
       </div>
+      <button className="border solid flex items-center justify-center p-3 ">
+        Load More
+      </button>
     </div>
   );
 };

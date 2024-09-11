@@ -1,6 +1,7 @@
 import useSWR from "swr";
 import moment from "moment";
 import Link from "next/link";
+import { useState } from "react";
 
 const url = "https://dev.to/api/articles";
 
@@ -8,6 +9,7 @@ const fetcher = (...args) => fetch(...args).then((res) => res.json());
 
 const Page = () => {
   const { data, error, isLoading } = useSWR(url, fetcher);
+  const [more, setMore] = useState(0);
 
   if (isLoading) {
     return <p>...loading</p>;
@@ -18,6 +20,11 @@ const Page = () => {
   }
 
   const Blogcarddata = [...data].slice(0, 12);
+
+  const handlePlus = () => {
+    setMore((slice) => slice + 1);
+  };
+
   return (
     <div className="flex flex-col gap-8">
       <div>
@@ -54,7 +61,10 @@ const Page = () => {
       </div>
       <div className="flex items-center justify-center">
         {" "}
-        <button className="border solid flex items-center justify-center px-5 py-3 rounded-md text-base font-medium text-gray-500">
+        <button
+          onClick={handlePlus}
+          className="border solid flex items-center justify-center px-5 py-3 rounded-md text-base font-medium text-gray-500"
+        >
           Load More
         </button>
       </div>

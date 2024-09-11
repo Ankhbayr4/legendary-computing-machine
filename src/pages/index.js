@@ -1,13 +1,16 @@
-import Image from "next/image";
-
 import Header from "@/components/Header";
+
 import Hero from "@/components/Hero";
 
 import Blogcard from "@/components/Blogcard";
 import Trending from "@/components/Trending";
 import Footer from "@/components/Footer";
+import { useContext } from "react";
+import { ThemeContext } from "@/components/ThemeContext";
 
 export default function Home() {
+  const light = useContext(ThemeContext);
+  console.log(light);
   return (
     <div className=" flex flex-col gap-[100px] ">
       <div className="">

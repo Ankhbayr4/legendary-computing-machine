@@ -54,7 +54,7 @@ const Page = () => {
       </div>
       <div className="flex items-center justify-center">
         {" "}
-        <button className="border solid flex items-center justify-center p-3 text-lg font-medium ">
+        <button className="border solid flex items-center justify-center px-5 py-3 rounded-md text-base font-medium text-gray-500">
           Load More
         </button>
       </div>

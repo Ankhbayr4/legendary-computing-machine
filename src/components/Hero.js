@@ -28,20 +28,21 @@ const Content = () => {
     <div className="flex flex-col gap-[11px]">
       <div className="max-w-[1200px] ">
         <div className="w-full flex flex-col">
-          <img src={selectedBlog.cover_image} className="h-[600px]" />
+          <img
+            src={selectedBlog.cover_image}
+            className="h-[600px] rounded-xl"
+          />
         </div>
       </div>
       <div className=" flex justify-end gap-[9px]">
         <button
           onClick={handlePrev}
-          className="border solid w-10 h-10 rounded-md flex items-center justify-center"
-        >
+          className="border solid w-10 h-10 rounded-md flex items-center justify-center">
           <img src="icon (1).png" />
         </button>
         <button
           onClick={handleNext}
-          className="border solid w-10 h-10 rounded-md flex items-center justify-center"
-        >
+          className="border solid w-10 h-10 rounded-md flex items-center justify-center">
           {" "}
           <img src="icon.png" />
         </button>

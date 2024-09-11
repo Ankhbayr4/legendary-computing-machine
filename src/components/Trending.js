@@ -24,9 +24,9 @@ const Trending = () => {
                 className="h-[320px] w-[289px] rounded-xl"
               />
 
-              <div className="card-body mt-20">
+              <div className="card-body mt-28">
                 <div className="card-actions justify-start">
-                  <button className="btn btn-primary py-2 text-white">
+                  <button className="btn btn-primary py-2 px-3 text-white">
                     Technology{" "}
                   </button>
                 </div>

@@ -4,20 +4,21 @@ import { AiOutlineSearch } from "react-icons/ai";
 const Header = () => {
   return (
     <div
-      className="flex justify-center py-8  px-[350px] gap-[118px]
-    ">
-      <img className="mr-36 h-8 w-40" src="/Logo.png" />
+      className="flex py-8  px-[350px] justify-between
+    "
+    >
+      <img className=" h-8 w-40" src="/Logo.png" />
       <div className="flex gap-10 w-[667px] justify-center items-center ">
         <Link href={"/home"}>
-          <p>Home</p>
+          <p className="text-base font-normal text-gray-600">Home</p>
         </Link>
 
         <Link href={"/blog"}>
           {" "}
-          <p>Blog</p>
+          <p className="text-base font-normal  text-gray-600">Blog</p>
         </Link>
         <Link href={"/contact"}>
-          <p>Contact</p>
+          <p className="text-base font-normal  text-gray-600">Contact</p>
         </Link>
       </div>
       <div className="relative">

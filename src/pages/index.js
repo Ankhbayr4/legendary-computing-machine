@@ -12,7 +12,7 @@ export default function Home() {
   const light = useContext(ThemeContext);
   console.log(light);
   return (
-    <div className=" flex flex-col gap-[100px] ">
+    <div className=" flex flex-col gap-[100px] w-[1900px] mx-auto">
       <div className="">
         <Header />
       </div>

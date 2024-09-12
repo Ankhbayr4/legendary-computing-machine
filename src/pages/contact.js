@@ -47,18 +47,22 @@ const Contant = () => {
               <div className="flex gap-7">
                 <input
                   placeholder="Your Name "
-                  className="bg-gray-50 w-[225px] h-[38px] rounded-md pl-5 py-[14px] pr-[14px]"></input>
+                  className=" w-[225px] h-[38px] rounded-md pl-5 py-[14px] pr-[14px]"
+                ></input>
                 <input
                   placeholder="Your Email "
-                  className="bg-gray-50 w-[225px] h-[38px] rounded-md pl-5 py-[14px] pr-[14px]"></input>
+                  className=" w-[225px] h-[38px] rounded-md pl-5 py-[14px] pr-[14px]"
+                ></input>
               </div>
               <div className="flex flex-col gap-5">
                 <input
                   placeholder="your name "
-                  className="bg-gray-50 w-[478px] h-[35px] rounded-md pl-5 py-[14px]"></input>
+                  className="w-[478px] h-[35px] rounded-md pl-5 py-[14px]"
+                ></input>
                 <input
                   placeholder="your name "
-                  className="bg-gray-50 w-[478px] h-[134px] rounded-md pl-5 py-[14px]"></input>
+                  className=" w-[478px] h-[134px] rounded-md pl-5 py-[14px]"
+                ></input>
               </div>
               <div>
                 <button className="btn btn-primary px-[10px ] py-4">

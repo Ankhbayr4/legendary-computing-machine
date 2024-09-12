@@ -63,7 +63,8 @@ const Page = () => {
         {" "}
         <button
           onClick={addTask}
-          className="border solid flex items-center justify-center px-5 py-3 rounded-md text-base font-medium text-gray-500">
+          className="border solid flex items-center justify-center px-5 py-3 rounded-md text-base font-medium text-gray-500"
+        >
           Load More
         </button>
       </div>

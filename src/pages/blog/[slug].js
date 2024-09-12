@@ -1,3 +1,5 @@
+import Footer from "@/components/Footer";
+import Header from "@/components/Header";
 import parse from "html-react-parser";
 import { useRouter } from "next/router";
 import useSWR from "swr";
@@ -11,7 +13,15 @@ const Page = () => {
   const body_html = blogDefualt?.body_html;
   {
   }
-  return <div>{parse(body_html)}</div>;
+  return (
+    <div>
+      <Header />
+      <div className=" flex flex-col gap-5 w-[1200px] mx-auto">
+        <div>{parse(body_html)}</div>;
+        <Footer />
+      </div>
+    </div>
+  );
 };
 
 export default Page;

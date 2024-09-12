@@ -18,9 +18,9 @@ const Footer = () => {
             </div>
           </div>
           <div className=" flex flex-col gap-2 w-[576px] items-center ">
-            <p className="text-base font-normal">Home</p>
-            <p className="text-base font-normal">Blog</p>
-            <p className="text-base font-normal">Contant</p>
+            <p className="text-base font-normal  text-gray-600">Home</p>
+            <p className="text-base font-normal  text-gray-600">Blog</p>
+            <p className="text-base font-normal  text-gray-600">Contant</p>
           </div>
           <div className="flex">
             <div>
@@ -34,7 +34,7 @@ const Footer = () => {
 
         <p className="border solid max-w-[1200px]"></p>
         <div className="flex justify-between ">
-          <div className="flex p-8 ">
+          <div className="flex py-8 ">
             <div>
               {" "}
               <img src="gogo.png" />

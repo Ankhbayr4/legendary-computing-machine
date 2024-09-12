@@ -9,7 +9,11 @@ const fetcher = (...args) => fetch(...args).then((res) => res.json());
 
 const Page = () => {
   const { data, error, isLoading } = useSWR(url, fetcher);
-  const [more, setMore] = useState(9);
+  const [more, setMore] = useState(12);
+
+  const addTask = () => {
+    setMore(more + 3);
+  };
 
   if (isLoading) {
     return <p>...loading</p>;
@@ -19,26 +23,13 @@ const Page = () => {
     return <p>...oh sorry error</p>;
   }
 
-  const Blogcarddata = [...data].slice(0, 9);
+  const Blogcarddata = [...data].slice(0, more);
 
   return (
     <div className="flex flex-col gap-8 w-[1200px] mx-auto">
       <div>
         {" "}
         <p className="text-2xl font-extrabold">All Blog Post</p>
-      </div>
-      <div className="flex justify-between">
-        <div className="flex gap-5">
-          <p className="text-xs font-bold">All</p>
-          <p className="text-xs font-bold">Design</p>
-          <p className="text-xs font-bold">Travel</p>
-          <p className="text-xs font-bold">Technology</p>
-          <p className="text-xs font-bold">Branding</p>
-        </div>
-
-        <div>
-          <p className="text-xs font-bold">View All</p>
-        </div>
       </div>
 
       <div className="max-w-[1200px] grid grid-cols-3 mx-auto gap-5 ">
@@ -57,7 +48,10 @@ const Page = () => {
       </div>
       <div className="flex items-center justify-center">
         {" "}
-        <button className="border solid flex items-center justify-center px-5 py-3 rounded-md text-base font-medium text-gray-500">
+        <button
+          onClick={addTask}
+          className="border solid flex items-center justify-center px-5 py-3 rounded-md text-base font-medium text-gray-500"
+        >
           Load More
         </button>
       </div>

@@ -32,8 +32,7 @@ const Trending = () => {
                 </div>
 
                 <p className="text-lg font-semibold text-white">
-                  The Impact of Technology on the Workplace: How Technology is
-                  Changing
+                  {trending.title}
                 </p>
               </div>
             </div>

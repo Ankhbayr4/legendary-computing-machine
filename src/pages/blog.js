@@ -1,12 +1,14 @@
 import Header from "@/components/Header";
-import Blogcard from "@/components/Blogcard";
+import Blogcarda from "@/components/Blogcarda";
 import Footer from "@/components/Footer";
 const Page = () => {
   return (
-    <div>
+    <div className="flex flex-col gap-12">
       <Header />
-      <Blogcard />
-      <Footer />
+      <Blogcarda />
+      <div>
+        <Footer />
+      </div>
     </div>
   );
 };

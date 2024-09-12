@@ -11,10 +11,6 @@ const Page = () => {
   const { data, error, isLoading } = useSWR(url, fetcher);
   const [more, setMore] = useState(9);
 
-  const addTask = () => {
-    setMore(more + 3);
-  };
-
   if (isLoading) {
     return <p>...loading</p>;
   }
@@ -23,7 +19,7 @@ const Page = () => {
     return <p>...oh sorry error</p>;
   }
 
-  const Blogcarddata = [...data].slice(0, more);
+  const Blogcarddata = [...data].slice(0, 9);
 
   return (
     <div className="flex flex-col gap-8 w-[1200px] mx-auto">
@@ -61,9 +57,7 @@ const Page = () => {
       </div>
       <div className="flex items-center justify-center">
         {" "}
-        <button
-          onClick={addTask}
-          className="border solid flex items-center justify-center px-5 py-3 rounded-md text-base font-medium text-gray-500">
+        <button className="border solid flex items-center justify-center px-5 py-3 rounded-md text-base font-medium text-gray-500">
           Load More
         </button>
       </div>

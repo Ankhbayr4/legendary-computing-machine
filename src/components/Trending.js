@@ -41,6 +41,11 @@ const Trending = () => {
       <div>
         <div className="card-actions justify-end"></div>
       </div>
+      <div className="flex gap-4">git push ahdkjsfhj</div>
+      <div>akhlfjesdfhkjlesdh</div>
+      <div>akhlfjesdfhkjlesdh</div>
+      <div>akhlfjesdfhkjlesdh</div>
+      <div>akhlfjesdfhkjlesdh</div>
     </div>
   );
 };

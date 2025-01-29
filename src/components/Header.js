@@ -5,8 +5,7 @@ const Header = () => {
   return (
     <div
       className="flex py-8  px-[350px] justify-between
-    "
-    >
+    ">
       <img className=" h-8 w-40" src="/Logo.png" />
       <div className="flex gap-10 w-[667px] justify-center items-center ">
         <Link href={"/home"}>
@@ -25,6 +24,7 @@ const Header = () => {
         <input placeholder=" search " className="bg-gray-100 ml-5 rounded-md" />
         <AiOutlineSearch className="absolute right-2 bottom-3" />
       </div>
+      <div>e;shligeksdfld;jsg</div>
     </div>
   );
 };

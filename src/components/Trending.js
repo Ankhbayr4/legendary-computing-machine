@@ -1,4 +1,3 @@
-import Link from "next/link";
 import useSWR from "swr";
 
 const url = "https://dev.to/api/articles";
